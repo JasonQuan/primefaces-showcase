@@ -43,7 +43,7 @@
             <version>5.0.1.Final</version>
         </dependency>
 
-         <!-- Data Exporter -->
+        <!-- Data Exporter -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
@@ -144,6 +144,11 @@
             <artifactId>barcode4j-light</artifactId>
             <version>2.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.jason</groupId>
+            <artifactId>quick-platform</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <repositories>
@@ -156,6 +161,12 @@
 
     <build>
         <resources>
+            <resource>
+                <directory>src/main/java/</directory>
+                <includes>
+                    <include>**/*.java</include>
+                </includes>
+            </resource>            
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
@@ -174,16 +185,16 @@
                 </configuration>
             </plugin>
             <plugin>
-				<groupId>org.mortbay.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>8.1.9.v20130131</version>
-				<configuration>
-					<webAppConfig>
-						<contextPath>/showcase</contextPath>
-					</webAppConfig>
-					<scanIntervalSeconds>5</scanIntervalSeconds>
-				</configuration>
-			</plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.9.v20130131</version>
+                <configuration>
+                    <webAppConfig>
+                        <contextPath>/showcase</contextPath>
+                    </webAppConfig>
+                    <scanIntervalSeconds>5</scanIntervalSeconds>
+                </configuration>
+            </plugin>
         </plugins>
 
         <extensions>
@@ -223,6 +234,7 @@
                     <groupId>org.glassfish</groupId>
                     <artifactId>javax.faces</artifactId>
                     <version>2.2.10</version>
+                    <scope>provided</scope>
                 </dependency>
                 <dependency>
                     <groupId>org.atmosphere</groupId>
@@ -247,6 +259,7 @@
                     <groupId>org.glassfish</groupId>
                     <artifactId>javax.faces</artifactId>
                     <version>2.2.8</version>
+                    <scope>provided</scope>
                 </dependency>
                 <dependency>
                     <groupId>org.atmosphere</groupId>
@@ -271,6 +284,7 @@
                     <groupId>org.glassfish</groupId>
                     <artifactId>javax.faces</artifactId>
                     <version>2.2.8</version>
+                    <scope>provided</scope>
                 </dependency>
                 <dependency>
                     <groupId>org.atmosphere</groupId>

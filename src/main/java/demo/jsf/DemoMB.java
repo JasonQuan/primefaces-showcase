@@ -6,15 +6,12 @@ import com.quick.ext.primefaces.base.web.BaseMB;
 import demo.ejb.StudentsSB;
 import demo.entity.Students;
 import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Map;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
-import org.primefaces.context.RequestContext;
 
 @ManagedBean
 @ViewScoped
-public class DemoMB extends BaseMB<Students, Students> implements Serializable{
+public class DemoMB extends BaseMB<Students, Students> implements Serializable {
 
     private String headerText;
     private boolean deleteRow;
@@ -38,21 +35,10 @@ public class DemoMB extends BaseMB<Students, Students> implements Serializable{
     private String uiDatatableTable;
     private boolean globalFilter;
     private int freezeColumnsSize;
-    private StudentsSB studentsSB = new StudentsSB();
 
     @Override
     protected BaseEJB<Students, Students> dao() {
-        return studentsSB;
-//        return new StudentsSB();
-    }
-
-    public void openSource() {
-        Map<String, Object> options = new HashMap<String, Object>();
-        options.put("maximizable", true);
-        options.put("minimizable", true);
-        options.put("contentHeight", 500);
-        options.put("contentWidth", 1024);
-        RequestContext.getCurrentInstance().openDialog("demo_sources", options, null);
+        return new StudentsSB();
     }
 
     public void initTable() {

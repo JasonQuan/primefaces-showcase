@@ -16,12 +16,4 @@ import org.primefaces.context.RequestContext;
 @ViewScoped
 public class DashboardMB extends BaseDashboardMB  implements Serializable{
 
-    public void openSource() {
-        Map<String, Object> options = new HashMap<String, Object>();
-        options.put("maximizable", true);
-        options.put("minimizable", true);
-        options.put("contentHeight", 500);
-        options.put("contentWidth", 1024);
-        RequestContext.getCurrentInstance().openDialog("dashboard_sources", options, null);
-    }
 }
