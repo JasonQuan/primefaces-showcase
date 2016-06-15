@@ -1,0 +1,9 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+    <p:tabView>
+        <p:tab title="XHTML page">
+            <pre name="code" class="brush:xml">#{showcaseUtil.getFileContent('/ui/ext/export.xhtml')}</pre>
+        </p:tab>
+    </p:tabView>
+</ui:composition>

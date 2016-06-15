@@ -1,0 +1,67 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:pe="http://primefaces.org/ui/exportor"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+
+    <ui:define name="title">
+        Extensions - <span class="subitem">Custom Export</span>
+    </ui:define>
+
+    <ui:define name="description">
+        This example demonstrates a simple for custom export column sort when you need.
+    </ui:define>
+
+    <ui:define name="implementation">
+
+        <h:form>
+            <p:dataTable id="tbl" var="car" value="#{dataExporterView.cars}" 
+                         paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
+                         paginator="true" rows="10" paginatorPosition="top" style="margin-bottom:20px">
+                <f:facet name="{Exporters}">
+                    <div style="float:right">
+                        <h:commandLink>
+                            <p:graphicImage name="/demo/images/excel.png" width="24"/>
+                            <pe:exporter type="xlsx" target="tbl" fileName="cars" />
+                        </h:commandLink>
+                    </div>
+                </f:facet>
+
+                <pe:column exportSort="#{1}">
+                    <f:facet name="header">
+                        <h:outputText value="Id -1" />
+                    </f:facet>
+                    <h:outputText value="#{car.id}" />
+                </pe:column>
+
+                <pe:column  exportSort="#{3}" headerText="Id -1">
+                    <f:facet name="header">
+                        <h:outputText value="Year  -3"/>
+                    </f:facet>
+                    <h:outputText value="#{car.year}" />
+                </pe:column>
+
+                <pe:column  exportSort="#{2}">
+                    <f:facet name="header">
+                        <h:outputText value="Brand -3" />
+                    </f:facet>
+                    <h:outputText value="#{car.brand}" />
+                </pe:column>
+
+                <pe:column exportSort="#{4}">
+                    <f:facet name="header">
+                        <h:outputText value="Color -4" />
+                    </f:facet>
+                    <h:outputText value="#{car.color}" />
+                </pe:column>
+            </p:dataTable>
+        </h:form>
+    </ui:define>
+
+    <ui:define name="source">
+        <ui:include src="export_sources.xhtml"/>
+    </ui:define>
+
+</ui:composition>
