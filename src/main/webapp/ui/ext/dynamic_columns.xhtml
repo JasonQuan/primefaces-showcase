@@ -59,7 +59,7 @@
                 <p:selectBooleanCheckbox id="exportSelect" value="#{demoMB.exportSelect}"/>
                 <p:commandButton value="update table" ajax="false" actionListener="#{demoMB.initTable()}"/>
                 <p:commandButton value="Columns Setting"/>
-        </p:panelGrid>
+            </p:panelGrid>
         </h:form>
         <h:form prependId="false">  
             <b:table id="baseTable" controller="#{demoMB}"
@@ -88,10 +88,22 @@
         </h:form>
     </ui:define>
     <ui:define name="source">
-    <p:tabView>
-        <p:tab title="XHTML page">
-            <pre name="code" class="brush:xml">#{showcaseUtil.getFileContent('/ui/ext/dynamic_columns.xhtml')}</pre>
-        </p:tab>
-    </p:tabView>
+        <p:tabView>
+            <p:tab title="XHTML">
+                <pre name="code" class="brush:xml">#{showcaseUtil.getFileContent('/ui/ext/dynamic_columns.xhtml')}</pre>
+            </p:tab>
+            <p:tab title="ManagedBean">
+                <pre name="code" class="brush:java">#{showcaseUtil.getFileContent('/demo/jsf/DemoMB.java')}</pre>
+            </p:tab>
+            <p:tab title="Entity">
+                <pre name="code" class="brush:java">#{showcaseUtil.getFileContent('/demo/entity/Students.java')}</pre>
+            </p:tab>
+            <p:tab title="Data Service">
+                <pre name="code" class="brush:java">#{showcaseUtil.getFileContent('/demo/ejb/StudentsSB.java')}</pre>
+            </p:tab>
+            <p:tab title="Super Data Service">
+                <pre name="code" class="brush:java">#{showcaseUtil.getFileContent('/demo/ejb/PrimefacesExtSPIImpl.java')}</pre>
+            </p:tab>
+        </p:tabView>
     </ui:define>
 </ui:composition>
