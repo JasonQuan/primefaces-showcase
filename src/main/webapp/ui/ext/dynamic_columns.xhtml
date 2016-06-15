@@ -58,7 +58,10 @@
                 <p:outputLabel for="exportSelect" value="export Select"/>
                 <p:selectBooleanCheckbox id="exportSelect" value="#{demoMB.exportSelect}"/>
                 <p:commandButton value="update table" ajax="false" actionListener="#{demoMB.initTable()}"/>
-                <p:commandButton value="Columns Setting"/>
+                <p:link outcome="columns_setting">
+                    <p:button value="Column Setting"/>
+                </p:link>
+                
             </p:panelGrid>
         </h:form>
         <h:form prependId="false">  
@@ -82,8 +85,7 @@
                      draggableColumns="#{demoMB.draggableColumns}"
                      exportSheetName="#{demoMB.exportSheetName}" 
                      exportName="#{demoMB.exportName}"                    
-                     selected="entitys"
-                     headerText="demo">
+                     selected="entitys">
             </b:table>
         </h:form>
     </ui:define>

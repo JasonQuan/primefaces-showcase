@@ -1,0 +1,20 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:pe="http://primefaces.org/ui/exportor"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+
+    <ui:define name="title">
+        Extensions - <span class="subitem">Dynamic Columns Setting</span>
+    </ui:define>
+
+    <ui:define name="description">
+        This example demonstrates a simple for custom export column sort when you need.
+    </ui:define>
+
+    <ui:define name="implementation">
+        <ui:include src="/page/ColumnsSeting.xhtml"/>
+    </ui:define>
+</ui:composition>
