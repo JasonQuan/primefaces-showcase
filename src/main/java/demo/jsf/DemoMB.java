@@ -19,7 +19,7 @@ public class DemoMB extends BaseMB<Moneny, Moneny> implements Serializable {
     private boolean draggableColumns;
     private boolean sort;
     private boolean filter;
-    private boolean resetColumnsAble;
+    private boolean resetColumnsAble = true;
     private boolean cellEdit;
     private boolean showIndex;
     private boolean resizableColumns;
@@ -32,7 +32,7 @@ public class DemoMB extends BaseMB<Moneny, Moneny> implements Serializable {
     private boolean exportSelect;
     private String exportName = "export";
     private String exportSheetName = "sheet0";
-    private String uiDatatableTable;
+    private String uiDatatableTable = "width:auto;";
     private boolean globalFilter;
     private int freezeColumnsSize;
 

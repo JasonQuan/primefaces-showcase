@@ -29,28 +29,28 @@
                     </div>
                 </f:facet>
 
-                <pe:column exportSort="#{1}">
+                <pe:column exportSort="#{1}" exportHeader="ID">
                     <f:facet name="header">
                         <h:outputText value="Id -1" />
                     </f:facet>
                     <h:outputText value="#{car.id}" />
                 </pe:column>
 
-                <pe:column  exportSort="#{3}" headerText="Id -1">
+                <pe:column  exportSort="#{3}" exportHeader="年">
                     <f:facet name="header">
                         <h:outputText value="Year  -3"/>
                     </f:facet>
                     <h:outputText value="#{car.year}" />
                 </pe:column>
 
-                <pe:column  exportSort="#{2}">
+                <pe:column  exportSort="#{2}" exportHeader="品牌">
                     <f:facet name="header">
                         <h:outputText value="Brand -2" />
                     </f:facet>
                     <h:outputText value="#{car.brand}" />
                 </pe:column>
 
-                <pe:column exportSort="#{4}">
+                <pe:column exportSort="#{4}" exportHeader="颜色">
                     <f:facet name="header">
                         <h:outputText value="Color -4" />
                     </f:facet>
