@@ -3,15 +3,15 @@ package demo.jsf;
 import com.quick.ext.primefaces.base.service.BaseEJB;
 import com.quick.ext.primefaces.base.web.BaseMB;
 
-import demo.ejb.StudentsSB;
-import demo.entity.Students;
+import demo.ejb.MonenySB;
+import demo.entity.Moneny;
 import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 @ManagedBean
 @ViewScoped
-public class DemoMB extends BaseMB<Students, Students> implements Serializable {
+public class DemoMB extends BaseMB<Moneny, Moneny> implements Serializable {
 
     private String headerText;
     private boolean deleteRow;
@@ -37,8 +37,8 @@ public class DemoMB extends BaseMB<Students, Students> implements Serializable {
     private int freezeColumnsSize;
 
     @Override
-    protected BaseEJB<Students, Students> dao() {
-        return new StudentsSB();
+    protected BaseEJB<Moneny, Moneny> dao() {
+        return new MonenySB();
     }
 
     public void initTable() {

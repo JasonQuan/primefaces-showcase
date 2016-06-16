@@ -6,13 +6,13 @@
     <class>com.quick.ext.primefaces.base.web.view.entity.BaseColumnModel</class>
     <class>com.quick.ext.primefaces.base.web.view.entity.BaseDashboardModel</class>
     <class>com.quick.ext.primefaces.base.web.view.entity.BasePanelModel</class>
-    <class>demo.entity.Students</class>
+    <class>demo.entity.Moneny</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <shared-cache-mode>DISABLE_SELECTIVE</shared-cache-mode>
     <validation-mode>NONE</validation-mode>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/demo"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/demo?zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=utf-8"/>
       <property name="javax.persistence.jdbc.user" value="admin"/>
       <property name="javax.persistence.jdbc.password" value="admin"/>
       <property name="eclipselink.session.customizer" value="com.quick.ext.primefaces.base.util.UUIDSequence"/>
