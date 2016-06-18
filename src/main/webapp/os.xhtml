@@ -1,0 +1,78 @@
+<!DOCTYPE html [
+    <!ENTITY nbsp "&#160;">
+    <!ENTITY bull "&#8226;">
+    <!ENTITY copy "&#169;">
+]>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+            </f:facet>
+            <title>PrimeFaces ShowCase</title>
+            <h:outputStylesheet name="main/css/sh.css" />
+            <style type="text/css">
+                body {
+                    background: url("#{resource['demo/images/mockosx/macback.png']}");
+                    margin: 0;
+                    padding: 0;
+                    font-family: geneva, arial, helvetica, sans-serif;
+                    font-size:80%;
+                }
+                *{font-family: "Microsoft Yahei", Arial !important;}
+                a{text-decoration: none;font-weight: bold; color: #25AAE1;}
+            </style>
+        </h:head>
+        <h:body>
+            <p:growl showDetail="true" sticky="true"/>
+            <p:panel closable="false" style="width: 400px; margin: 10px;"
+                     header="About Primefaces"
+                     styleClass="terminalDialog">
+                简介：PrimeFaces是一个JSF Web应用程序的开源类库<br/>
+                特点：
+                <ul>
+                    <li>简单，学习成本低</li>
+                    <li>组件丰富，功能强大，支持主题功能，易于扩展</li>
+                    <li>适合管理型Web系统，可显著提高开发效率</li>
+                    <li><a href="http://primefaces.org" target="_blank">官方网站</a></li>
+                    <li><a href="http://www.primefaces.org/showcase-ext/views/home.jsf" target="_blank">官方扩展Showcase</a></li>
+                    <li><a href="index.xhtml" target="_blank">官方Showcase 中国镜像 + 本站扩展</a></li>
+                </ul>
+                推荐组合：
+                <ul>
+                    <li>EJB3，JPA，Jboss | Glassfish</li>
+                </ul>
+                相关知识：
+                <ul>
+                    <li><a href="https://docs.oracle.com/javaee/7/tutorial/" target="_blank">Java EE Tutorial</a></li>
+                    <li><a href="http://jq.qq.com/?_wv=1027&amp;k=2L9nfC6" target="_blank">QQ 交流群[primefaces]</a></li>
+                </ul>
+                缺点：
+                <ul>
+                    <li>在中国普及度较弱</li>
+                </ul>
+            </p:panel>
+            <p:panel closable="false" style="width: 400px; margin: 10px;"
+                     header="Who To"
+                     styleClass="terminalDialog">
+                <ul>
+                    <li><a href="#" target="_blank">扩展</a></li>
+                </ul>
+            </p:panel>
+            <p:dock>
+                <p:menuitem value="Showcase" icon="/resources/main/images/logo.svg" target="_blank" url="http://www.primefaces.cn" />
+                <p:menuitem value="Extensions" icon="/resources/main/images/mono/ajaxCore.svg" target="_blank" url="ui/ext/export.xhtml"/>
+                <p:menuitem value="Safari" icon="/resources/demo/images/mockosx/safari.png" url="#" />
+                <p:menuitem value="iTunes" icon="/resources/demo/images/mockosx/itunes.png" url="#"/>
+                <p:menuitem value="iChat" icon="/resources/demo/images/mockosx/ichat.png" url="#"/>
+                <p:menuitem value="Trash" icon="/resources/demo/images/mockosx/trash.png" url="#"/>
+            </p:dock>
+        </h:body>
+    </f:view>
+</html>
+

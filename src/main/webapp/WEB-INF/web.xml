@@ -5,15 +5,15 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" >
 	
     <welcome-file-list>
-        <welcome-file>index.xhtml</welcome-file>
+        <welcome-file>os.xhtml</welcome-file>
     </welcome-file-list>
     <context-param>
         <param-name>com.sun.faces.numberOfViewsInSession</param-name>
         <param-value>5</param-value>
     </context-param>
     <context-param>
-    	<param-name>com.sun.faces.serializeServerState</param-name>
-    	<param-value>false</param-value>
+        <param-name>com.sun.faces.serializeServerState</param-name>
+        <param-value>false</param-value>
     </context-param>
     <context-param>
         <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
@@ -52,7 +52,7 @@
         <param-name>primefaces.THEME</param-name>
         <param-value>#{guestPreferences.theme}</param-value>
     </context-param>
-        <context-param>
+    <context-param>
         <param-name>primefaces.FONT_AWESOME</param-name>
         <param-value>true</param-value>
     </context-param>
@@ -151,7 +151,7 @@
         <extension>eot</extension>
         <mime-type>application/vnd.ms-fontobject</mime-type>
     </mime-mapping>
-        <mime-mapping>
+    <mime-mapping>
         <extension>eot?#iefix</extension>
         <mime-type>application/vnd.ms-fontobject</mime-type>
     </mime-mapping>
@@ -167,7 +167,7 @@
         <extension>svg#latoblack</extension>
         <mime-type>image/svg+xml</mime-type>
     </mime-mapping>
-        <mime-mapping>
+    <mime-mapping>
         <extension>svg#latolight</extension>
         <mime-type>image/svg+xml</mime-type>
     </mime-mapping>
