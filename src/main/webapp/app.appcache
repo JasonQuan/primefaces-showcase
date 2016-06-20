@@ -1,0 +1,13 @@
+CACHE MANIFEST
+CACHE:
+/resources/main/images/logo.svg
+/resources/main/images/mono/ajaxCore.svg
+/javax.faces.resource/dock/dock.css.xhtml?ln=primefaces&v=6.0
+/javax.faces.resource/validation/validation.js.xhtml?ln=primefaces&v=6.0
+/javax.faces.resource/core.js.xhtml?ln=primefaces&v=6.0
+/javax.faces.resource/components.js.xhtml?ln=primefaces&v=6.0
+/javax.faces.resource/dock/dock.js.xhtml?ln=primefaces&v=6.0
+/javax.faces.resource/validation/beanvalidation.js.xhtml?ln=primefaces&v=6.0
+/javax.faces.resource/demo/images/mockosx/macback.png.xhtml
+NETWORK:
+/os.xhtml
