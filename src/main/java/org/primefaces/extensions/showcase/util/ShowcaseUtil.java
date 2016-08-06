@@ -19,6 +19,7 @@ package org.primefaces.extensions.showcase.util;
 
 import javax.faces.context.FacesContext;
 import java.io.InputStream;
+import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
@@ -30,7 +31,7 @@ import javax.faces.bean.ViewScoped;
  */
 @ManagedBean
 @ViewScoped
-public class ShowcaseUtil {
+public class ShowcaseUtil implements Serializable{
 
     public String getFileContent(final String fullPathToFile) {
         try {
