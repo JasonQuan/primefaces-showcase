@@ -2,69 +2,130 @@
     <!ENTITY nbsp "&#160;">
     <!ENTITY bull "&#8226;">
     <!ENTITY copy "&#169;">
-]>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
-    <f:view contentType="text/html">
-        <h:head>
-            <f:facet name="first">
-                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-                <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-                <meta name="apple-mobile-web-app-capable" content="yes" />
-            </f:facet>
-            <title>PrimeFaces ShowCase</title>
-            <h:outputStylesheet name="main/css/sh.css" />
-            <style type="text/css">
-                body {
-                    background: url("#{resource['demo/images/mockosx/macback.png']}");
-                    margin: 0;
-                    padding: 0;
-                    font-family: geneva, arial, helvetica, sans-serif;
-                    font-size:80%;
-                }
-                *{font-family: "Microsoft Yahei", Arial !important;}
-                a{text-decoration: none;font-weight: bold; color: #25AAE1;}
-            </style>
-        </h:head>
-        <h:body>
-            <p:growl showDetail="true" sticky="true"/>
-            <p:panel closable="false" style="width: 400px; margin: 10px;"
-                     header="About Primefaces"
-                     styleClass="terminalDialog">
-                简介：PrimeFaces是一个JSF Web应用程序的开源类库<br/>
-                特点：
-                <ul>
-                    <li>简单，学习成本低</li>
-                    <li>组件丰富，功能强大，支持主题功能，易于扩展</li>
-                    <li>适合管理型Web系统，可显著提高开发效率</li>
-                </ul>
-                相关网站：
-                <ul>
-                    <li><a href="http://primefaces.org" target="_blank">官方网站</a></li>
-                    <li><a href="http://www.primefaces.org/showcase-ext/views/home.jsf" target="_blank">官方扩展Showcase</a></li>
-                    <li><a href="index.xhtml" target="_blank">官方Showcase 中国镜像 + 本站扩展</a></li>
-                    <li><a href="http://bolg.primefaces.cn" target="_blank">本站博客</a></li>
-                </ul>
-                基础知识：
-                <ul>
-                    <li><a href="https://docs.oracle.com/javaee/7/tutorial/" target="_blank">Java EE Tutorial</a></li>
-                    <li><a href="http://jq.qq.com/?_wv=1027&amp;k=2L9nfC6" target="_blank">QQ 交流群[primefaces]</a></li>
-                </ul>
-            </p:panel>
-            <p:panel closable="false" style="width: 400px; margin: 10px;"
-                     header="Who To"
-                     styleClass="terminalDialog">
-                <ul>
-                    <li><a href="#" target="_blank">扩展</a></li>
-                </ul>
-            </p:panel>
-            <p:dock>
-                <p:menuitem value="Showcase" icon="/resources/main/images/logo.svg" target="_blank" url="http://www.primefaces.cn" />
-                <p:menuitem value="Extensions" icon="/resources/main/images/mono/ajaxCore.svg" target="_blank" url="ui/ext/export.xhtml"/>
-            </p:dock>
-        </h:body>
-    </f:view>
-</html>
+    ]>
+    <html xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:p="http://primefaces.org/ui">
+        <f:view contentType="text/html">
+            <h:head>
+                <f:facet name="first">
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+                    <meta name="apple-mobile-web-app-capable" content="yes" />
+                </f:facet>
+                <title>PrimeFaces ShowCase</title>
+                <h:outputStylesheet name="main/css/sh.css" />
+                <style type="text/css">
+                    body {
+                        background: url("#{resource['demo/images/mockosx/macback.png']}");
+                        margin: 0;
+                        padding: 0;
+                        font-family: geneva, arial, helvetica, sans-serif;
+                        font-size:80%;
+                    }
+                    *{font-family: "Microsoft Yahei", Arial !important;}
+                    
+                    a{ text-decoration:none; }
+                    a:hover{
+                        text-decoration:underline;
+                    }
+                    
+                    .panel-column{
+                        vertical-align: top;
+                    }
+                    .my-label button{
+                        margin: 4px;
+                        display: none;
+                    }
+                    li{
+                        margin: 4px;
+                        
+                    }
+                    .terminalDialog {
+                    }
+                </style>
+            </h:head>
+            <h:body>
+                <p:growl showDetail="true" sticky="true"/>
+                    <p:panel closable="false" style="width: 400px; margin: 10px;float: left;"
+                             header="About Primefaces"
+                             styleClass="terminalDialog">
+                        简介：PrimeFaces是一个JSF Web应用程序的开源类库<br/>
+                        特点：
+                        <ul>
+                            <li>简单，学习成本低</li>
+                            <li>组件丰富，功能强大，支持主题功能，易于扩展</li>
+                            <li>适合管理型Web系统，可显著提高开发效率</li>
+                        </ul>
+                        相关链接：
+                        <ul>
+                            <li><a href="http://primefaces.org" target="_blank">官方网站</a></li>
+                            <li><a href="http://www.primefaces.org/showcase-ext/views/home.jsf" target="_blank">官方扩展Showcase</a></li>
+                            <li><a href="index.xhtml" target="_blank">官方Showcase 中国镜像 + 本站扩展</a></li>
+                            <li><a href="http://bolg.primefaces.cn" target="_blank">本站博客</a></li>
+                        </ul>
+                        相关下载：
+                        <ul>
+                            <li><a target="_blank" href="https://repo1.maven.org/maven2/org/primefaces/primefaces/6.0/primefaces-6.0.jar">primefaces-6..jar</a></li>
+                            <li><a target="_blank" href="https://repo1.maven.org/maven2/org/primefaces/primefaces/6.0/primefaces-6.0-sources.jar">primefaces-6.0-sources.jar</a></li>
+                            <li><a target="_blank" href="https://repo1.maven.org/maven2/org/primefaces/primefaces/6.0/primefaces-6.0-javadoc.jar">primefaces-6.0-javadoc.jar</a></li>
+                            <li><a target="_blank" href="http://repository.primefaces.org/org/primefaces/showcase/6.0/showcase-6.0.war">showcase-6.0.war</a></li>
+                            <li><a target="_blank" href="https://github.com/primefaces/showcase/archive/6_0.zip">showcase-6.0-sources.zip</a></li>
+                            <li><a target="_blank" href="https://repo1.maven.org/maven2/org/primefaces/extensions/primefaces-extensions/6.0.0/primefaces-extensions-6.0.0.jar">primefaces-extensions-6.0.0.jar</a></li>
+                            <li><a target="_blank" href="https://repo1.maven.org/maven2/org/primefaces/extensions/primefaces-extensions/6.0.0/primefaces-extensions-6.0.0.sources.jar">primefaces-extensions-6.0.0.sources.jar</a></li>
+                            <li><a target="_blank" href="https://repo1.maven.org/maven2/org/primefaces/extensions/primefaces-extensions/6.0.0/primefaces-extensions-6.0.0.javadoc.jar">primefaces-extensions-6.0.0.javadoc.jar</a></li>
+
+
+                            <li><a target="_blank" href="https://github.com/JasonQuan/jars/blob/master/quick-platform-1.0-SNAPSHOT.jar">quick-platform.jar</a></li>
+                            <li><a target="_blank" href="https://github.com/JasonQuan/jars/blob/master/primefaces-datatable-ext-export-1.0-SNAPSHOT.jar">datatable-export-ext.jar</a></li>
+                        </ul>
+                        基础知识：
+                        <ul>
+                            <li><a href="https://docs.oracle.com/javaee/7/tutorial/" target="_blank">Java EE Tutorial</a></li>
+                            <li><a href="http://jq.qq.com/?_wv=1027&amp;k=2L9nfC6" target="_blank">QQ 交流群[primefaces]</a></li>
+                        </ul>
+                    </p:panel>
+                    <p:panel header="About Me" style="width: 400px; margin: 10px;top:0;float: left;">
+                        <p:fieldset legend="Jason Chen">
+                            <div class="my-label">
+                                <p:button value="Jave EE"/>
+                            </div>
+
+                            <br/>
+                            My Link
+                            <ul>
+                                <li><a target="_blank" href="https://github.com/JasonQuan">Github: https://github.com/JasonQuan</a></li>
+                                <li><a target="_blank" href="mailto:C13632762094@outlook.com">Email: C13632762094@outlook.com</a></li>
+                            </ul>
+                            Extension Shoucase
+                            <ul>                            
+                                <li><a target="_blank" href="/ui/ext/moneny.xhtml">Dynamic columns ext</a></li>
+                                <li><a target="_blank" href="/ui/ext/export.xhtml">Export ext</a></li>
+                                <li><a target="_blank" href="/ui/ext/tree.xhtml">Tree ext</a></li>
+                                <li><a target="_blank" href="/ui/ext/treeTable.xhtml">TreeTable ext</a></li>
+                                <li><a target="_blank" href="/ui/ext/dashboard.xhtml">Dashboard ext</a></li>
+                            </ul>
+                            My app demo
+                            <ul>
+                                <li><a target="_blank" href="/z">体检统计</a></li>
+                            </ul>
+                        </p:fieldset>
+                    </p:panel>
+                    <p:panel closable="false" style="width: 400px; margin: 10px; float: left;"
+                             header="how To"
+                             styleClass="terminalDialog">
+                        <ul>
+                            <li><a href="#" target="_blank">extension primefaces</a></li>
+                            <li><a href="#" target="_blank">run primefaces on jboss</a></li>
+                            <li><a href="#" target="_blank">run primefaces on tomcat</a></li>
+                        </ul>
+                    </p:panel>
+                <p:dock>
+                    <p:menuitem value="Showcase" icon="/resources/main/images/logo.svg" target="_blank" url="http://www.primefaces.cn" />
+                    <p:menuitem value="Extensions" icon="/resources/main/images/mono/ajaxCore.svg" target="_blank" url="ui/ext/export.xhtml"/>
+                </p:dock>
+            </h:body>
+        </f:view>
+    </html>
 
