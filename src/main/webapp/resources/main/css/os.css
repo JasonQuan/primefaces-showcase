@@ -1,0 +1,36 @@
+body {
+    background: url("#{resource['demo/images/mockosx/macback.png']}");
+    margin: 0;
+    padding: 0;
+    font-family: geneva, arial, helvetica, sans-serif;
+    font-size:80%;
+}
+*{font-family: "Microsoft Yahei", Arial !important;}
+
+a{ text-decoration:none; }
+a:hover{
+    text-decoration:underline;
+}
+
+.panel-column{
+    vertical-align: top;
+}
+.my-label button{
+    margin: 4px;
+    display: none;
+}
+li{
+    margin: 4px;
+
+}
+.terminalDialog {
+    width: 400px; margin: 10px;top:0;float: left;
+}
+@media (max-width:400px){
+    .terminalDialog {
+        width: 94%;
+    }
+    .ui-dock-bottom{
+        display: none!important;
+    }
+}
