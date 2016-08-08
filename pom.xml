@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.primefaces</groupId>
+    <groupId>org.efaces</groupId>
     <artifactId>showcase</artifactId>
     <packaging>war</packaging>
     <version>6.0</version>
@@ -222,13 +222,13 @@
             </activation>
             <properties>
                 <jsfVersion>Mojarra-2.2.8</jsfVersion>
-                <primefacesVersion>PrimeFaces-6.1-SNAPSHOT</primefacesVersion>
+                <primefacesVersion>PrimeFaces-6.0</primefacesVersion>
             </properties>
             <dependencies>
                 <dependency>
                     <groupId>org.primefaces</groupId>
                     <artifactId>primefaces</artifactId>
-                    <version>6.1-SNAPSHOT</version>
+                    <version>6.0</version>
                 </dependency>
                 <dependency>
                     <groupId>org.glassfish</groupId>
