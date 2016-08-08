@@ -1,0 +1,62 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:cc="http://java.sun.com/jsf/composite"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:b="http://java.sun.com/jsf/composite/b">
+    <cc:interface>
+        <cc:attribute name="items"/>
+        <cc:attribute name="edit" default="false"/>
+        <cc:attribute name="delete" default="false"/>
+        <cc:attribute name="updateId" default="@this"/>
+        <cc:attribute name="expanded" type="java.lang.Boolean" default="false" displayName="是否展开，默认false"/>        
+    </cc:interface>
+    <cc:implementation>
+        <p:treeTable id="docs"
+                     value="#{baseCategoryBean.getAllTreeNode(cc.attrs.expanded)}" 
+                     editable="#{cc.attrs.edit}"
+                     editMode="cell"
+                     selection="#{baseCategoryBean.selectNode}"
+                     var="tree">
+            <p:ajax event="cellEdit" listener="#{baseCategoryBean.onCellEdit}" update="#{cc.attrs.updateId}" />
+            <p:column headerText="name" style="width:200px;">
+                <p:cellEditor>
+                    <h:outputText id="eid" style="display: none" title="#{tree.id}" styleClass="name"/>
+                    <f:facet name="output"><h:outputText value="#{tree.name}" /></f:facet>
+                    <f:facet name="input"><p:inputText value="#{tree.name}" style="width:100%"/></f:facet>
+                </p:cellEditor>
+            </p:column>
+            <p:column headerText="target">
+                ${tree.target}
+            </p:column>
+            <p:column headerText="url">
+                ${tree.url}
+            </p:column>
+            <p:column headerText="disabled">
+                ${tree.disabled}
+            </p:column>
+            <p:column headerText="action">
+                ${tree.action}
+            </p:column>
+            <p:column headerText="actionListener">
+                ${tree.actionListener}
+            </p:column>
+            <p:column headerText="update">
+                ${tree.updateRender}
+            </p:column>
+            <p:column headerText="process">
+                ${tree.process}
+            </p:column>
+            <p:column headerText="ajax">
+                ${tree.ajax}
+            </p:column>
+            <p:column headerText="remark">
+                ${tree.remark}
+            </p:column>
+            <p:column headerText="sort">
+                ${tree.sort}
+            </p:column>
+        </p:treeTable>
+    </cc:implementation>
+</ui:composition>

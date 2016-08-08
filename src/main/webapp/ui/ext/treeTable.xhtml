@@ -1,0 +1,33 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml"
+                xmlns:t="http://xmlns.jcp.org/jsf/composite/t">
+
+    <ui:define name="title">
+        Extensions - <span class="subitem">Tree Table</span>
+    </ui:define>
+
+    <ui:define name="description">
+    </ui:define>
+
+    <ui:define name="implementation">
+        <h:form>
+            <t:treeTable edit="true" delete="true" expanded="true"/>
+        </h:form>
+    </ui:define>
+
+    <ui:define name="source">
+        <p:tabView>
+            <p:tab title="XHTML page">
+                <pre name="code" class="brush:xml">
+&lt;ui:composition xmlns:b="http://xmlns.jcp.org/jsf/composite/b"&gt;
+&lt;b:treeNode edit="true" expanded="true"/&gt;
+                </pre>
+            </p:tab>
+        </p:tabView>
+    </ui:define>
+
+</ui:composition>
