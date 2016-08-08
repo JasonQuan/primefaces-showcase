@@ -164,6 +164,11 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.39</version>
         </dependency>
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>javax.el-api</artifactId>
+            <version>2.2.5</version>
+        </dependency>
     </dependencies>
 
     <repositories>
@@ -205,11 +210,14 @@
                 <version>8.1.9.v20130131</version>
                 <configuration>
                     <webAppConfig>
-                        <contextPath>/showcase</contextPath>
+                        <contextPath>/</contextPath>
                     </webAppConfig>
-                    <httpConnector>
-                        <port>80</port>
-                    </httpConnector>
+                    <connectors>
+                        <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+                            <port>80</port>
+                            <maxIdleTime>60000</maxIdleTime>
+                        </connector>
+                    </connectors>
                     <scanIntervalSeconds>5</scanIntervalSeconds>
                 </configuration>
             </plugin>
