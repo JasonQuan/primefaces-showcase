@@ -207,6 +207,9 @@
                     <webAppConfig>
                         <contextPath>/showcase</contextPath>
                     </webAppConfig>
+                    <httpConnector>
+                        <port>80</port>
+                    </httpConnector>
                     <scanIntervalSeconds>5</scanIntervalSeconds>
                 </configuration>
             </plugin>
