@@ -149,6 +149,21 @@
             <artifactId>quick-platform</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.faces</artifactId>
+            <version>2.2.8</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.39</version>
+        </dependency>
     </dependencies>
 
     <repositories>
@@ -231,12 +246,6 @@
                     <version>6.0</version>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish</groupId>
-                    <artifactId>javax.faces</artifactId>
-                    <version>2.2.10</version>
-                    <scope>provided</scope>
-                </dependency>
-                <dependency>
                     <groupId>org.atmosphere</groupId>
                     <artifactId>atmosphere-runtime</artifactId>
                     <version>2.4.3</version>
@@ -254,37 +263,6 @@
                     <groupId>org.primefaces</groupId>
                     <artifactId>primefaces</artifactId>
                     <version>6.0</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.glassfish</groupId>
-                    <artifactId>javax.faces</artifactId>
-                    <version>2.2.8</version>
-                    <scope>provided</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.atmosphere</groupId>
-                    <artifactId>atmosphere-runtime</artifactId>
-                    <version>2.4.3</version>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>elite-dev</id>
-            <properties>
-                <jsfVersion>Mojarra-2.2.8</jsfVersion>
-                <primefacesVersion>PrimeFaces-5.3.14-SNAPSHOT</primefacesVersion>
-            </properties>
-            <dependencies>
-                <dependency>
-                    <groupId>org.primefaces</groupId>
-                    <artifactId>primefaces</artifactId>
-                    <version>5.3.14-SNAPSHOT</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.glassfish</groupId>
-                    <artifactId>javax.faces</artifactId>
-                    <version>2.2.8</version>
-                    <scope>provided</scope>
                 </dependency>
                 <dependency>
                     <groupId>org.atmosphere</groupId>
